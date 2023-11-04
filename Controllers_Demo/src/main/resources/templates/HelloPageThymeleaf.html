@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <style>
+    *{
+      font-family: Arial;
+      color: #ff0026;
+    }
+    h1{
+      color: blue;
+    }
+    h2{
+      color: greenyellow;
+    }
+    .title_box{
+      border: 2px solid #222;
+      border-radius: 5px;
+      width: fit-content;
+      padding: 0.5em;
+    }
+
+  </style>
+</head>
+<body>
+<div class="title_box">
+  <h1 th:text = "${message}">Hello from the html page</h1>
+</div>
+<h2>Hello from the html page</h2>
+
+<p>This is good</p>
+
+</body>
+</html>

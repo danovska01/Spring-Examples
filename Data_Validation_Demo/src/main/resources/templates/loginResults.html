@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+  <!-- Link to your external CSS file -->
+  <link href="/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="container" th:object="${loginModel}">
+  <p>Username: <span th:text="*{username}"></span></p>
+  <p>Password: <span th:text="*{password}"></span></p>
+
+</div>
+
+
+</body>
+</html>
