@@ -1,4 +1,4 @@
-package project.model.entity;
+package project.model.entity.enums;
 
 
 public enum TransactionTypeNameEnum {

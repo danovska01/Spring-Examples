@@ -2,7 +2,7 @@ package project.service;
 
 import org.springframework.stereotype.Service;
 import project.model.entity.TransactionType;
-import project.model.entity.TransactionTypeNameEnum;
+import project.model.entity.enums.TransactionTypeNameEnum;
 import project.repository.TransactionTypeRepository;
 
 import java.util.Arrays;

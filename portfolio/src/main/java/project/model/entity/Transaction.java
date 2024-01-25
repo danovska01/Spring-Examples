@@ -13,6 +13,8 @@ public class Transaction extends BaseEntity{
     private LocalDateTime date;
     @ManyToOne
     private TransactionType transactionType;
+    @OneToOne
+    private Exchange exchange;
 
     private BigDecimal price;
     private double amount;
@@ -81,5 +83,13 @@ public class Transaction extends BaseEntity{
 
     public void setTotalUSDT(BigDecimal totalUSDT) {
         this.totalUSDT = price.multiply(BigDecimal.valueOf(amount));
+    }
+
+    public Exchange getExchange() {
+        return exchange;
+    }
+
+    public void setExchange(Exchange exchange) {
+        this.exchange = exchange;
     }
 }

@@ -1,6 +1,7 @@
 package project.model.entity;
 
 import jakarta.persistence.*;
+import project.model.entity.enums.TransactionTypeNameEnum;
 
 @Entity
 @Table(name = "transaction_type")
