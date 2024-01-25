@@ -6,6 +6,8 @@ public class UserServiceModel {
     private String username;
     private String password;
 
+    private String email;
+
 
 
 
@@ -13,9 +15,13 @@ public class UserServiceModel {
     public UserServiceModel() {
     }
 
+    public String getEmail() {
+        return email;
+    }
 
-
-
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public String getId() {
         return id;
