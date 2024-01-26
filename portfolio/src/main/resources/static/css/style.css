@@ -1,79 +1,80 @@
-/* Common styles for both forms */
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+body{
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgb(26, 86, 86) 0%, rgb(79, 175, 175) 86%);
+    background-attachment: fixed;
+    margin:0;
+    font-family: 'Poppins', sans-serif;
 }
+
+#form{
+    width:400px;
+    margin:20vh auto 0 auto;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding:30px;
+}
+
+h1{
+    text-align: center;
+    color: #073a3a;
+}
+
+#form button{
+    background-color: #073a3a;
+    color:white;
+    border: 1px solid #792099;
+    border-radius: 5px;
+    padding:10px;
+    margin:20px 0px;
+    cursor:pointer;
+    font-size:20px;
+    width:100%;
+}
+
+.input-group{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-group input{
+    border-radius: 5px;
+    font-size:20px;
+    margin-top:5px;
+    padding:10px;
+    border:1px solid rgb(34,193,195) ;
+}
+
+.input-group input:focus{
+    outline:0;
+}
+
+.input-group .error{
+    color:rgb(242, 18, 18);
+    font-size:16px;
+    margin-top: 5px;
+}
+
+.input-group.success input{
+    border-color: #0cc477;
+}
+
+.input-group.error input{
+    border-color:rgb(206, 67, 67);
+}
+
+/*--------------NAV----------------------------------*/
+
+
 header{
-    padding: 30px 0 0 0 ;
+    margin-top: 20px;
 }
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-form {
-    /*max-width: 600px;*/
-    width: 40%;
-    margin-top: -150px;
-    padding: 30px;
-    border: 3px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: gainsboro;
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-}
-
-input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 16px;
-    box-sizing: border-box;
-    border-radius: 10px;
-}
-
-button {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-h1 {
-    text-align: center;
-    color: #333;
-}
-
-h2 {
-    text-align: center;
-    color: #333;
-}
-
-
-/*
--------------------------- NAV and footer---------------------------------------
-*/
-
-
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Align items to the right */
+    justify-content: flex-end;
 }
 
 nav li {
@@ -82,16 +83,18 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: black;
+    color: white;
+    font-size: 26px;
 }
 
 main {
     justify-content: center;
+    text-align: center;
     padding: 20px;
 }
 
 footer {
-    background-color: #333;
+    background-color:#073a3a;
     color: white;
     padding: 10px;
     text-align: center;

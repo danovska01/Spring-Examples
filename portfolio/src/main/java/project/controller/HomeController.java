@@ -60,7 +60,7 @@ public class HomeController {
 
         if(result.hasErrors()){
             model.addAttribute("user", userRegisterBindingModel);
-            return "/register";
+            return "register";
         }
 
         userService.registerUser(modelMapper.map(userRegisterBindingModel, UserServiceModel.class));
