@@ -17,7 +17,7 @@ public class UserRegisterBindingModel {
     private String password;
     @NotBlank
     @Size(min = 3, max = 20)
-    private String confirmPassword;
+    private String cpassword;
 
 
     public UserRegisterBindingModel() {
@@ -35,10 +35,10 @@ public class UserRegisterBindingModel {
 
 
     public String getConfirmPassword() {
-        return confirmPassword;
+        return cpassword;
     }
     public void setConfirmPassword(String confirmPassword) {
-        this.confirmPassword = confirmPassword;
+        this.cpassword = confirmPassword;
     }
 
     public String getUsername() {

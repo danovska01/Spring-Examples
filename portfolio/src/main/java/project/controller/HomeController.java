@@ -1,11 +1,14 @@
 package project.controller;
 
 import jakarta.validation.Valid;
+import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
+
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import project.model.binding.UserLoginBindingModel;
 import project.model.binding.UserRegisterBindingModel;
+
 import project.model.service.UserServiceModel;
 import project.service.UserService;
 import project.util.CurrentUser;
@@ -40,8 +43,6 @@ public class HomeController {
 
         return "home";
     }
-
-
     @GetMapping("/register")
     public String showRegistrationForm(Model model){
         // create model object to store form data
@@ -50,22 +51,43 @@ public class HomeController {
         return "register";
     }
 
+
+
+//    @PostMapping("/register")
+//    public ResponseEntity<String> registerUser(@RequestBody @Valid UserRegisterBindingModel userRegisterBindingModel,
+//                                               BindingResult bindingResult) {
+//        if (bindingResult.hasErrors()) {
+//            // Handle validation errors, return bad request
+//            return ResponseEntity.badRequest().body("Invalid registration data");
+//        }
+//
+//        // Map UserRegisterBindingModel to UserServiceModel using ModelMapper
+//        UserServiceModel userServiceModel = modelMapper.map(userRegisterBindingModel, UserServiceModel.class);
+//
+//        // Save the user to the database using your UserService
+//        userService.registerUser(userServiceModel);
+//
+//        return ResponseEntity.ok("Registration successful");
+//    }
+//
+
+
     // handler method to handle user registration form submit request
-    @PostMapping("/register/save")
-    public String registration(@Valid @ModelAttribute("user") UserRegisterBindingModel userRegisterBindingModel,
-                               BindingResult result,
-                               Model model){
-
-
-
-        if(result.hasErrors()){
-            model.addAttribute("user", userRegisterBindingModel);
-            return "register";
-        }
-
-        userService.registerUser(modelMapper.map(userRegisterBindingModel, UserServiceModel.class));
-        return "redirect:/login";
-    }
+//    @PostMapping("/register/save")
+//    public String registration(@Valid @ModelAttribute("user") UserRegisterBindingModel userRegisterBindingModel,
+//                               BindingResult result,
+//                               Model model){
+//
+//
+//
+//        if(result.hasErrors()){
+//            model.addAttribute("user", userRegisterBindingModel);
+//            return "register";
+//        }
+//
+//        userService.registerUser(modelMapper.map(userRegisterBindingModel, UserServiceModel.class));
+//        return "redirect:/login";
+//    }
 
     @GetMapping("/login")
     public String showLoginForm(Model model){
